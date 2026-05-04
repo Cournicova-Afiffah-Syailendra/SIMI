@@ -17,8 +17,8 @@ use App\Models\LoanRequest;
 use App\Http\Controllers\AjukanPublikController;
 
 Route::get('/', function () {
-    return redirect('/login');
-});
+   return view('landingpage');
+})->name('landing');
 // ── Route Publik (tanpa login) ──────────────────────────
 Route::get('/ajukan', [AjukanPublikController::class, 'index'])
      ->name('publik.ajukan');
